@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs"); -%>
+
+    <h1>Home</h1>
+    <p><%= firstPara %> </p>
+
+     <%  dataArray.forEach(function(postData){ %>
+     <h3><%= postData.Title.charAt(0).toUpperCase() + postData.Title.slice(1)%></h3>
+     <p><%= postData.Entry.substring(0,100) + " ..."%>
+     <a href="/dataArray/<%= postData.Title %> ">Read More</a></p>
+     <% }) %>
+
+     
+<%- include("partials/footer.ejs"); -%>
+
+          
+     
+      
+     
+
+           
